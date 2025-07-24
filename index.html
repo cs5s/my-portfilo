@@ -9,12 +9,12 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("YOUR_USER_ID"); // استبدله بمعرفك
+      emailjs.init("vUhKlqr5wxfAzzrhn"); // استبدله بمعرفك
     })();
 
     function sendEmail(e) {
       e.preventDefault();
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target)
+      emailjs.sendForm('service_di6je8b', 'template_0kehvqg', e.target)
         .then(() => {
           alert("تم إرسال الرسالة بنجاح ✅");
           e.target.reset();
