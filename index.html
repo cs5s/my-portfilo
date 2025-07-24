@@ -8,21 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    (function(){
-      emailjs.init("IFUmpoby3iPjBl2az"); // استبدله بمعرفك
-    })();
+  (function(){
+    emailjs.init("IFUmpoby3iPjBl2az"); // المفتاح العام Public Key
+  })();
 
-    function sendEmail(e) {
-      e.preventDefault();
-      emailjs.sendForm('service_di6je8b', 'template_0kehvqg', e.target)
-        .then(() => {
-          alert("تم إرسال الرسالة بنجاح ✅");
-          e.target.reset();
-        }, (error) => {
-          alert("حدث خطأ أثناء الإرسال ❌: " + JSON.stringify(error));
-        });
-    }
-  </script>
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm('cs5s', 'template_0kehvqg', e.target)
+      .then(() => {
+        alert("تم إرسال الرسالة بنجاح ✅");
+        e.target.reset();
+      }, (error) => {
+        alert("حدث خطأ أثناء الإرسال ❌: " + JSON.stringify(error));
+      });
+  }
+</script>
 </head>
 <body>
   <header>
