@@ -3,74 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>المصمم علي مهندس الذكاء الاصطناعي</title>
+  <title>المصمم علي - مهندس الذكاء الاصطناعي</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_USER_ID"); // <-- ضع هنا معرف المستخدم الخاص بك من EmailJS
+    })();
+    
+    function sendEmail(e) {
+      e.preventDefault();
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target)
+        .then(() => {
+          alert("تم إرسال الرسالة بنجاح ✅");
+          e.target.reset();
+        }, (error) => {
+          alert("حدث خطأ أثناء الإرسال ❌: " + JSON.stringify(error));
+        });
+    }
+  </script>
 </head>
 <body>
   <header>
-    <h1>المصمم علي</h1>
-    <p>مهندس الذكاء الاصطناعي</p>
-    <nav>
-      <ul>
-        <li><a href="#services">الخدمات</a></li>
-        <li><a href="#portfolio">أعمالي</a></li>
-        <li><a href="#contact">تواصل معي</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>المصمم علي</h1>
+      <p>مهندس الذكاء الاصطناعي والتصميم الإبداعي</p>
+      <nav>
+        <ul>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#portfolio">أعمالي</a></li>
+          <li><a href="#contact">تواصل معي</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="services" class="grid">
-      <div class="card">
-        <img src="icons/post-design.png" alt="تصميم بوستات وصور" />
-        <h3>تصميم البوستات والصور</h3>
+  <section id="services" class="section">
+    <div class="container">
+      <h2>خدماتي</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <img src="icons/post-design.png" alt="تصميم بوستات" />
+          <h3>تصميم البوستات والصور</h3>
+          <p>تصاميم احترافية لمنصات التواصل بجودة عالية.</p>
+        </div>
+        <div class="service-card">
+          <img src="icons/report.png" alt="تقارير جامعية" />
+          <h3>تصميم التقارير الجامعية</h3>
+          <p>تنسيق أكاديمي جذاب ومنظم.</p>
+        </div>
+        <div class="service-card">
+          <img src="icons/cv.png" alt="تصميم سيرة ذاتية" />
+          <h3>تصميم السير الذاتية</h3>
+          <p>سيرة ذاتية بصريًا قوية تبرز مهاراتك.</p>
+        </div>
+        <div class="service-card">
+          <img src="icons/booklet.png" alt="ملازم دراسية" />
+          <h3>تصميم الملازم الدراسية</h3>
+          <p>ملازم تعليمية بتصميم أنيق وسهل القراءة.</p>
+        </div>
+        <div class="service-card">
+          <img src="icons/video-edit.png" alt="تعديل فيديو" />
+          <h3>تعديل الفيديوهات</h3>
+          <p>مونتاج احترافي للمحتوى التعليمي والتسويقي.</p>
+        </div>
+        <div class="service-card">
+          <img src="icons/photo-edit.png" alt="تصميم صور" />
+          <h3>تصميم الصور</h3>
+          <p>تحسين وتعديل الصور بلمسة فنية دقيقة.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="icons/report.png" alt="تصميم تقارير جامعية" />
-        <h3>تصميم التقارير الجامعية</h3>
-      </div>
-      <div class="card">
-        <img src="icons/cv.png" alt="تصميم السيرة الذاتية" />
-        <h3>تصميم السير الذاتية</h3>
-      </div>
-      <div class="card">
-        <img src="icons/booklet.png" alt="تصميم الملازم الدراسية" />
-        <h3>تصميم الملازم الدراسية</h3>
-      </div>
-      <div class="card">
-        <img src="icons/video-edit.png" alt="تعديل الفيديوهات" />
-        <h3>تعديل الفيديوهات</h3>
-      </div>
-      <div class="card">
-        <img src="icons/photo-edit.png" alt="تصميم الصور" />
-        <h3>تصميم الصور</h3>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="portfolio">
+  <section id="portfolio" class="section dark-bg">
+    <div class="container">
       <h2>أعمالي</h2>
-      <p>هنا سيتم عرض بعض من أعمالي التي أضفتها</p>
-    </section>
+      <p>هنا أشارك بعض من أبرز أعمالي، يتم تحديث المعرض باستمرار.</p>
+      <div class="portfolio-gallery">
+        <p>قريبًا...</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
+  <section id="contact" class="section">
+    <div class="container">
       <h2>تواصل معي</h2>
-      <form action="https://formsubmit.co/fm76400076@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-
+      <form onsubmit="sendEmail(event)">
         <label for="name">الاسم:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">البريد الإلكتروني:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="service">نوع الخدمة المطلوبة:</label>
-        <select id="service" name="service">
-          <option value="post">تصميم بوستات وصور</option>
-          <option value="report">تقارير جامعية</option>
-          <option value="cv">سيرة ذاتية</option>
-          <option value="booklet">ملازم دراسية</option>
-          <option value="video">تعديل فيديو</option>
-          <option value="image">تصميم صور</option>
+        <label for="service">نوع الخدمة:</label>
+        <select id="service" name="service" required>
+          <option value="تصميم بوستات وصور">تصميم بوستات وصور</option>
+          <option value="تقارير جامعية">تقارير جامعية</option>
+          <option value="سيرة ذاتية">سيرة ذاتية</option>
+          <option value="ملازم دراسية">ملازم دراسية</option>
+          <option value="تعديل فيديو">تعديل فيديو</option>
+          <option value="تصميم صور">تصميم صور</option>
         </select>
 
         <label for="message">الرسالة:</label>
@@ -78,11 +112,11 @@
 
         <button type="submit">إرسال</button>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 المصمم علي مهندس الذكاء الاصطناعي</p>
+    <p>© 2025 المصمم علي. جميع الحقوق محفوظة.</p>
   </footer>
 </body>
 </html>
