@@ -9,9 +9,9 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("YOUR_USER_ID"); // <-- ضع هنا معرف المستخدم الخاص بك من EmailJS
+      emailjs.init("YOUR_USER_ID"); // استبدله بمعرفك
     })();
-    
+
     function sendEmail(e) {
       e.preventDefault();
       emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target)
@@ -80,7 +80,7 @@
   <section id="portfolio" class="section dark-bg">
     <div class="container">
       <h2>أعمالي</h2>
-      <p>هنا أشارك بعض من أبرز أعمالي، يتم تحديث المعرض باستمرار.</p>
+      <p style="text-align: center;">هنا أشارك بعض من أبرز أعمالي، يتم تحديث المعرض باستمرار.</p>
       <div class="portfolio-gallery">
         <p>قريبًا...</p>
       </div>
